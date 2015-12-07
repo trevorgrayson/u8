@@ -17,3 +17,15 @@ Eval an ls, then map the elements to the contents of each file.
 `U8.interactive` will allow you to run arbitrary commands, and print their results. 
 
 Try running `rash` from the `bin` directory if you would like to try the poor man's ruby shell.
+
+Building a shell wrapper?
+
+    git = U8.command :git
+
+    git :add, filename
+    git :commit
+
+Or
+
+    curl = U8.command :curl, prefix: '--'
+    curl 'http://www.awesome.com'
